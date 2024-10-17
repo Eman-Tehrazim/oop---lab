@@ -1,0 +1,42 @@
+Task	2:	
+package	javalab4;
+import	java.u5l.Scanner;
+public	class	Laptop	{
+				String	brand;
+				Laptop(String	brand){
+								this.brand	=	brand;				
+				}
+				void	displayinfo(){
+								System.out.println("The	brand	of	
+laptop	is:	"+brand);
+				}
+				public	sta5c	void	main(String[]args){
+								Scanner	scan	=	new	
+Scanner(System.in);
+								System.out.println("Enter	the	brand	
+of	laptop	:");
+								String	b	=	scan.nextLine();
+								Laptop	e	=	new	Laptop(b);
+								e.displayinfo();		
+			}		
+}
+
+Task	1:	
+public	class	PrintE	{
+				public	sta5c	void	main(String[]	args)	{
+								for	(int	row	=	0;	row	<	7;	row++)	{
+												for	(int	col	=	0;	col	<	5;	col++)	{
+															
+																if	(col	==	0)	{	
+																				System.out.print("*");
+																}	else	if	(row	==	0	||	row	==	3	||	
+row	==	6)	{
+																				System.out.print("*");
+																}	else	{
+																				System.out.print("	");
+																}
+												}
+												System.out.println();
+								}
+				}
+}

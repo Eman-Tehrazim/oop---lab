@@ -1,0 +1,83 @@
+Task Number 01
+Code:
+public class Player {
+    String playerName;
+    String playerPosition;
+    Player(String playerName, String Playerposition){
+        this.playerName = playerName;
+        this.playerPosition = Playerposition;
+    }
+    void displayinfo(){
+        System.out.println("player 1"+playerName);
+        System.out.println("palyer 2"+playerPosition);
+    }
+}
+public class Team {
+    String teamName;
+    Player players1;
+    Player players2;
+    Team(String teamName, Player playerstype1, Player playerstype2){
+        this.teamName = teamName;
+        this.players1 = playerstype1;
+        this.players2 = playerstype2;
+    }
+       public static void main(String[]args){
+        Player p1 = new Player("Eman", "Forward");
+        Player p2 = new Player("Maryam", "Defender");
+        Team t1 = new Team("Eman", p1,p2);
+        p1.displayinfo();
+        p2.displayinfo();
+}
+}
+
+Task Number 02
+Code:
+class CPU {
+    String brand;
+    double clockSpeed;
+    int cores;
+    CPU(String brand, double clockSpeed, int cores) {
+        this.brand = brand;
+        this.clockSpeed = clockSpeed;
+        this.cores = cores;
+    }
+}
+class RAM {
+    String brand;
+    int capacity;
+    RAM(String brand, int capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+}
+class HardDrive {
+    String brand;
+    int capacity;
+    HardDrive(String brand, int capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+}
+class Computer {
+    CPU cpu;
+    RAM ram;
+    HardDrive hardDrive;
+    Computer(CPU cpu, RAM ram, HardDrive hardDrive) {
+        this.cpu = cpu;
+        this.ram = ram;
+        this.hardDrive = hardDrive;
+    }
+    void displayDetails() {
+        System.out.println("CPU: " + cpu.brand + ", " + cpu.clockSpeed + " GHz, " + cpu.cores + " cores");
+        System.out.println("RAM: " + ram.brand + ", " + ram.capacity + " GB");
+        System.out.println("Hard Drive: " + hardDrive.brand + ", " + hardDrive.capacity + " GB");
+    }
+    public static void main(String[] args) {
+        CPU cpu = new CPU("Veinberg", 3.2, 8);
+        RAM ram = new RAM("Sabrent Rocket", 16);
+        HardDrive hardDrive = new HardDrive("Huwawei", 1024);
+        Computer computer = new Computer(cpu, ram, hardDrive);
+        computer.displayDetails();
+        computer = null; 
+    }
+}
